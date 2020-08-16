@@ -1,0 +1,24 @@
+---
+server:  port: 7001
+spring:
+  application:
+    name: survey-api
+  jpa:  
+    hibernate:  
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect  
+  datasource:  
+    url: "jdbc:postgresql://localhost:5432/survey"  
+    username: admin 
+    password: admin123   
+    
+logging:
+  file:
+    name: application.log
+  pattern:
+    file: "%d %p %c{1.} [%t] %m%n"
+  level: 
+    org.springframework: ERROR
+    org.apache.kafka: ERROR
+    com.wipro: DEBUG
+    
